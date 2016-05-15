@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: with lib;
 {
   #imports = [ ./xcompose.nix ];
-  imports = [ ./extra.nix ];
+  imports = [ ./extra.nix ./games.nix ];
 
   config = mkIf config.services.xserver.enable {
     services.xserver = {
@@ -29,11 +29,11 @@
       };
     };
 
-    #hardware = {
-      #pulseaudio.enable = true;
-      #opengl.driSupport32Bit = true;
-      #pulseaudio.support32Bit = true;
-    #};
+    hardware = {
+      pulseaudio.enable = true;
+      opengl.driSupport32Bit = true;
+      pulseaudio.support32Bit = true;
+    };
 
     environment.systemPackages = with pkgs;
       [ alsaUtils xsel pavucontrol xorg.xkill ] ++

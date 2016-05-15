@@ -3,7 +3,8 @@
 
 {
    virtualisation.docker.enable = true;
-   virtualisation.docker.storageDriver = "zfs";
+   #virtualisation.docker.storageDriver = "zfs";
+   virtualisation.docker.extraOptions = "--log-driver journald";
 
    environment.systemPackages = with pkgs; [
         docker
