@@ -8,6 +8,8 @@
   # nixpkgs.config.packageOverrides = import ../pkgs;
   # environment.etc."nix/nixpkgs-config.nix".text = "(import <nixpkgs/nixos> {}).config.nixpkgs.config";
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
 	acpi
 	aspell
