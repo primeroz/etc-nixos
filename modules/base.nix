@@ -12,6 +12,7 @@
 
   environment.systemPackages = with pkgs; [
 	acpi
+	ack
 	aspell
 	aspellDicts.en
 	boot
@@ -19,7 +20,7 @@
 	ctags
 	dstat
 	file
-        git
+    git
 	gnumake
 	gnupg
 	htop
@@ -29,17 +30,21 @@
 	mtr
 	ncdu
 	nix-repl
-        nox
+    nox
 	nmap
+	pciutils
 	pstree
 	pv
+	python27
 	silver-searcher
 	sysstat
 	taskwarrior
+	tcpdump
 	traceroute
 	tree
 	tmux
 	unzip
+	usbutils
 	vim
 	wget
 	which
