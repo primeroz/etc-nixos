@@ -20,17 +20,18 @@
 
    environment.systemPackages = with pkgs; [
         docker
-        pkgs.python27Packages.six
-        (pkgs.lib.overrideDerivation pkgs.python27Packages.dockerpty (attrs: {
-                    name = "dockerpty-0.4.1";
-                    src = pkgs.fetchurl {
-                        url = "https://pypi.python.org/packages/8d/ee/e9ecce4c32204a6738e0a5d5883d3413794d7498fe8b06f44becc028d3ba/dockerpty-0.4.1.tar.gz";
-                        sha256 = "1kjn64wx23jmr8dcc6g7bwlmrhfmxr77gh6iphqsl39sayfxdab9";
-                    };
-                      buildInputs = [
-                        python27
-                      ];
-            }))
+        pkgs.python27Packages.docker_compose
+#        pkgs.python27Packages.six
+#        (pkgs.lib.overrideDerivation pkgs.python27Packages.dockerpty (attrs: {
+#                    name = "dockerpty-0.4.1";
+#                    src = pkgs.fetchurl {
+#                        url = "https://pypi.python.org/packages/8d/ee/e9ecce4c32204a6738e0a5d5883d3413794d7498fe8b06f44becc028d3ba/dockerpty-0.4.1.tar.gz";
+#                        sha256 = "1kjn64wx23jmr8dcc6g7bwlmrhfmxr77gh6iphqsl39sayfxdab9";
+#                    };
+#                      buildInputs = [
+#                        python27
+#                      ];
+#            }))
 #        (pkgs.lib.overrideDerivation pkgs.python27Packages.docker_compose (attrs: {
 #                      version = "1.6.2";
 #                      name = "docker-compose-1.6.2";
