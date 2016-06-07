@@ -40,7 +40,8 @@
       [ i3 i3lock i3status chromium vimb st dmenu ] ++
       [ libnotify ghostscript graphviz ] ++
       #[ steam xonotic ];
-      [ ];
+      [ mate-icon-theme hicolor_icon_theme ] ++
+      [ cbatticon conky ];
 
     nixpkgs.config.chromium.enablePepperFlash = false;
 
