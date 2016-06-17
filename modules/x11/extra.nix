@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
 	feh
+	leafpad
 	networkmanagerapplet
 	tilda
 	volumeicon
