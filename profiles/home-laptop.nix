@@ -8,5 +8,6 @@
     ../modules/docker.nix
     ../modules/x11.nix
     ../modules/x11
+    ../modules/libvirt.nix
   ];
 }
