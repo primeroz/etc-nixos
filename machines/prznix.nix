@@ -6,7 +6,7 @@
 
 {
   imports =
-    [ 
+    [
       <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
       ../profiles/home-laptop.nix
     ];
@@ -25,11 +25,15 @@
   boot.extraModulePackages = [ ];
   boot.supportedFilesystems = [ "zfs" ];
 
+  #boot.kernelParams = assert config.boot.kernelPackages.kernel.features.bfq or false;
+          #[ "elevator=bfq" ];
+
+
   networking.hostName = "prznix"; # Define your hostname.
   networking.networkmanager.enable = true;  # Enables NetworkManager
   networking.hostId = "619f329b";
 
-  # Machine Hardware Config - 
+  # Machine Hardware Config -
   # Encrypted Disk
   boot.initrd.luks.devices = [
     { name = "luksroot"; device = "/dev/sda2"; preLVM = true; }
@@ -42,6 +46,11 @@
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/18108d88-fd70-430c-a5c2-a7cf172932c0";
+      fsType = "ext4";
+    };
+
+  fileSystems."/home/prz/.local/share/Steam" =
+    { device = "/dev/disk/by-uuid/dfb6048a-8a3f-41c7-9090-b392904ecc5f";
       fsType = "ext4";
     };
 
