@@ -16,7 +16,8 @@
 
 
       displayManager.sessionCommands = ''
-          ${pkgs.feh}/bin/feh --bg-scale ./wallpapers/wallpaper.jpg &
+          ${pkgs.dunst}/bin/dunst &
+          ${pkgs.xautolock}/bin/xautolock -time 10 -locker "i3lock " &
         '' + optionalString config.networking.networkmanager.enable ''
           ${pkgs.networkmanagerapplet}/bin/nm-applet &
         '';
@@ -37,7 +38,7 @@
 
     environment.systemPackages = with pkgs;
       [ alsaUtils xsel pavucontrol xorg.xkill ] ++
-      [ i3 i3lock i3status chromium vimb st dmenu ] ++
+      [ i3 i3lock i3status xautolock dunst chromium vimb st dmenu ] ++
       [ libnotify ghostscript graphviz ] ++
       #[ steam xonotic ];
       [ mate-icon-theme hicolor_icon_theme ] ++
