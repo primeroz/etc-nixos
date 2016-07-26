@@ -8,7 +8,7 @@
      home = "/home/prz";
      shell = "/run/current-system/sw/bin/zsh";
      group = "users";
-     extraGroups = ["wheel" "networkmanager" "docker" ];
+     extraGroups = ["wheel" "networkmanager" "docker" "libvirtd" ];
      email = "primeroznl@gmail.com";
      uid = 1000;
    };
