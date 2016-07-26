@@ -30,6 +30,7 @@
 	mtr
 	ncdu
 	nix-repl
+	nix-prefetch-git
     nox
 	nmap
 	pciutils

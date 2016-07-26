@@ -1,6 +1,7 @@
 {
   imports = [
     ../modules/base.nix
+    ../modules/extras.nix
     ../modules/thinkpad.nix
     ../modules/useroptions.nix
     ../modules/user.nix
