@@ -1,7 +1,7 @@
 #
 { config, lib, pkgs, nixpkgs, ... }:
 
-let custompkgs = import ../nixpkgs/default.nix {}; in
+let upstream = import ../nixpkgs/default.nix {}; in
 {
    virtualisation.docker.enable = true;
    #virtualisation.docker.storageDriver = "zfs";
@@ -9,8 +9,8 @@ let custompkgs = import ../nixpkgs/default.nix {}; in
 
    environment.systemPackages = with pkgs; [
         docker
-        custompkgs.python27Packages.dockerpty
-        custompkgs.python27Packages.docker_compose
+        upstream.python27Packages.dockerpty
+        upstream.python27Packages.docker_compose
         ];
 
 
