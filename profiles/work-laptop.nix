@@ -9,6 +9,7 @@
     ../modules/docker.nix
     ../modules/x11.nix
     ../modules/x11
+    ../modules/monitoring.nix
     ../modules/yubikey.nix
     ../modules/ledger.nix
     ../modules/libvirt.nix
