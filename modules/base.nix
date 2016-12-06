@@ -1,6 +1,7 @@
 #
 { config, lib, pkgs, ... }:
 
+let upstream = import ../nixpkgs/default.nix {}; in
 {
   environment.etc.hostname.text = config.networking.hostName;
 
@@ -20,7 +21,7 @@
 	ctags
 	dstat
 	file
-    git
+    	git
 	gnumake
 	gnupg
 	htop
@@ -31,12 +32,13 @@
 	ncdu
 	nix-repl
 	nix-prefetch-git
-    nox
+    	nox
 	nmap
 	pciutils
 	pstree
 	pv
 	python27
+	upstream.python27Packages.configparser
 	silver-searcher
 	sysstat
 	taskwarrior
