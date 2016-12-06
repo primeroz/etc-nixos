@@ -101,6 +101,10 @@
     %wheel ALL = NOPASSWD: ALL
   '';
 
+  powerManagement = {
+          enable = true;
+      };
+
   # singleton not available ?
   # hack for things that don't know about XDG_RUNTIME_DIR
   #systemd.automounts = singleton { where = "/run/user/0"; wantedBy = [ "local-fs.target" ]; };

@@ -2,6 +2,7 @@
 
 rec {
 
+  hugo = callPackage ./hugo {};
   shell2http = callPackage ./shell2http {};
   terminus = callPackage ./terminus {};
   #linux = callPackage ./linux {};
