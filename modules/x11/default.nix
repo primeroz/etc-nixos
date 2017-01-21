@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: with lib;
 {
   #imports = [ ./xcompose.nix ];
-  imports = [ ./extra.nix ./games.nix ];
+  imports = [ ./extra.nix ./games.nix  ];
 
   config = mkIf config.services.xserver.enable {
     services.xserver = {
@@ -41,7 +41,7 @@
       [ i3 i3lock i3status xautolock dunst chromium vimb st dmenu ] ++
       [ libnotify ghostscript graphviz ] ++
       #[ steam xonotic ];
-      [ mate-icon-theme hicolor_icon_theme ] ++
+      [ mate.mate-icon-theme hicolor_icon_theme ] ++
       [ cbatticon conky ];
 
     nixpkgs.config.chromium.enablePepperFlash = false;

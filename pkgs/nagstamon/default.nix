@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
     owner = "HenriWahl";
     repo = "Nagstamon";
     rev = "master";
-    sha256 = "1fmdganj0pn2xw6mg6rkl04fk6ymi4r71ikl96bpcmp15jpd4y0l";
+    sha256 = "1rxh656cbxcqg4x2nsshn24w3c841a4pw5xpxq0zm3nm89n78iyn";
   };
 
   meta = with stdenv.lib; {
